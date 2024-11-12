@@ -38,7 +38,7 @@ public class Main {
 
         private void processStateStart() {
             if (command.equals("Up")) {
-                storyArea.setText("You walk north to Tavern on the Green and see a lively wedding celebration. Do you want to crash it? (Click YES/NO)");
+                storyArea.setText("You walk north to Tavern on the Green and see a lively wedding celebration. Two of your friends are getting married, and they didn't invite you. Do you crash out? (Click YES/NO)");
                 toggleDirectionButtons(false);
                 toggleYesNoButtons(true);
                 state = "s1_tavern";
@@ -48,7 +48,7 @@ public class Main {
 
         private void processWeddingChoice() {
             if (command.equals("Yes")) {
-                storyArea.setText("You attempt to sneak into the wedding and promptly get arrested! Game over.");
+                storyArea.setText("You proceed to destroy the food, cake, drinks, and everthing in your path until you get arrested. Game over.");
                 endGame();
             } else if (command.equals("No")) {
                 storyArea.setText("You pass the wedding and keep walking, reaching Sheep's Meadow. It's peaceful here. (Click a DIRECTION)");
